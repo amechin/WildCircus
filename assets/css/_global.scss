@@ -1,0 +1,111 @@
+// Global styling for this template
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+// Typography
+.text-white-75 {
+  color: fade-out($white, .25);
+}
+
+// Custom horizontal rules
+hr.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: $danger;
+}
+
+hr.light {
+  border-color: $white;
+}
+
+// Button restyling
+.btn {
+  font-family: $font-family-sans-serif;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+// Page section padding
+.page-section {
+  padding: 8rem 0;
+}
+
+p{
+  line-height: 2vw;
+  opacity: 0.9;
+}
+
+.text-danger{
+  opacity: 0.9;
+}
+
+.btn-danger{
+  opacity: 0.6;
+}
+
+.img-fluid{
+  opacity: 0.8;
+}
+
+.bg-danger{
+  opacity: 0.8;
+}
+
+#grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+#grayscale:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* VERTICAL */
+@keyframes vertical {
+  0%{transform:translate(0,-3px)}
+  4%{transform:translate(0,3px)}
+  8%{transform:translate(0,-3px)}
+  12%{transform:translate(0,3px)}
+  16%{transform:translate(0,-3px)}
+  20%{transform:translate(0,3px)}
+  22%,100%{transform:translate(0,0)}
+}
+.faa-vertical.animated,
+.faa-vertical.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-vertical {
+  animation: vertical 2s ease infinite;
+}
+.faa-vertical.animated.faa-fast,
+.faa-vertical.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-vertical.faa-fast {
+  animation: vertical 1s ease infinite;
+}
+.faa-vertical.animated.faa-slow,
+.faa-vertical.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-vertical.faa-slow {
+  animation: vertical 4s ease infinite;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+  animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+  animation-duration:1s;
+  animation-delay: 0.5s
+}

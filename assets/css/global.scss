@@ -1,0 +1,17 @@
+// assets/css/global.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+// Import custom variables (overrides Bootstrap default variables)
+@import "./variables";
+
+// Import custom styles
+@import "./global";
+@import "./navbar";
+@import "./masthead";
+@import "./portfolio";
+@import "./imagePerformances";
